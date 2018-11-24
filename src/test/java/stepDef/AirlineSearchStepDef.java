@@ -38,7 +38,7 @@ public class AirlineSearchStepDef extends BaseClass {
 
 	@Given("^I select departure date (\\d+) weeks from today's date$")
 	public void i_select_departure_date_weeks_from_today_s_date(int arg1) throws Throwable {
-
+       
 	}
 
 	@Given("^I select return date (\\d+) weeks from departure date$")
