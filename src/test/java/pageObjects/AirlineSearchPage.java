@@ -131,8 +131,10 @@ public class AirlineSearchPage extends BaseClass {
 	}
 
 	public void clickSearchButton() {
-
-		driver.findElement(searchButton).click();
+	
+		WebElement searchButtonwait = driver.findElement(searchButton);
+		customwait.Custom_wait(driver, searchButtonwait);
+		searchButtonwait.click();
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,1000)");
 	}

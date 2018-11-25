@@ -1,7 +1,6 @@
 package stepDef;
 
-import org.openqa.selenium.By;
-
+import java.util.List;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -64,11 +63,15 @@ public class AirlineSearchStepDef extends BaseClass {
 	}
 
 	@When("^I filter by the following flight carrier$")
-	public void i_filter_by_the_following_flight_carrier(DataTable arg1) throws Throwable {
+	public void i_filter_by_the_following_flight_carrier(DataTable flightsData) throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
 		// For automatic transformation, change DataTable to one of
 		// List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
 		// E,K,V must be a scalar (String, Integer, Date, enum etc)
+		
+		List<List<String>> data = flightsData.raw();
+		System.out.println(data);
+	
 
 	}
 
