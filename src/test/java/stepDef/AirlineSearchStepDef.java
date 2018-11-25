@@ -1,5 +1,7 @@
 package stepDef;
 
+import org.openqa.selenium.By;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -38,27 +40,27 @@ public class AirlineSearchStepDef extends BaseClass {
 
 	@Given("^I select departure date (\\d+) weeks from today's date$")
 	public void i_select_departure_date_weeks_from_today_s_date(int arg1) throws Throwable {
-       
+		airlineSearchPage.selectDepartueDat();
 	}
 
 	@Given("^I select return date (\\d+) weeks from departure date$")
 	public void i_select_return_date_weeks_from_departure_date(int arg1) throws Throwable {
-
+		airlineSearchPage.selectReturnDate();
 	}
 
 	@Given("^I select (\\d+) Adult$")
 	public void i_select_Adult(int arg1) throws Throwable {
-
+		airlineSearchPage.selectAdult();
 	}
 
 	@Given("^I select (\\d+) Child$")
 	public void i_select_Child(int arg1) throws Throwable {
-
+		airlineSearchPage.selectChild();
 	}
 
 	@When("^I click SEARCH button$")
 	public void i_click_SEARCH_button() throws Throwable {
-
+		airlineSearchPage.clickSearchButton();
 	}
 
 	@When("^I filter by the following flight carrier$")
